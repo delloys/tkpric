@@ -23,112 +23,229 @@
   <div class=menu2>
     <ul>
         <li><a href="#zatemnenie">Открыть/Изменить</a></li>
-        <li><a>Добавить</a></li>
-        <li><a>Поиск</a></li>
+        <li><a href="#zatemnenie2">Добавить</a></li>
+        <li><a href="#zatemnenie3">Поиск</a></li>
         <li><a>Фильтр</a></li>
         <li><a>Удалить</a></li>
     </ul>
   </div>
 <!--Открыть/Изменить-->
-    {{ macros.render_change(select_book,id_book,old_author,tags,types,authors,len,int)}}
-  <!--Добавить-->
-<!--  <div id="zatemnenie">-->
-<!--      <div id="block_view2">-->
-<!--        <form action="{{ url_for('index') }}" method="get">-->
-<!--        <div class="win">-->
-<!--            <p>Книга:</p>-->
-<!--        <p>-->
-<!--            <label>-->
-<!--                Авторы:-->
-<!--                <input type="text" name="new_authors" required>-->
-<!--            </label>-->
-<!--            </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Название:-->
+  <div id="zatemnenie">
+      <div id="block_view2">
+        <form action="{{ url_for('index') }}" method="get">
+        <div class="win">
+            <p>Книга:</p>
+        <p>
+            <label>
+                Авторы:
+                <input type="text" name="new_authors" required>
+            </label>
+            </p>
+        <p>
+          <label>
+                Название:
+                <input type="text" name="new_name" required>
+            </label>
+            </p>
+        <p>
+        <p>
+          <label>
+                Том:
+                <input type="text" name="new_tom">
+            </label>
+            </p>
+        <p>
+        <p>
+          <label>
+                Год издания:
+                <input type="text" name="new_year">
+            </label>
+        </p>
+        <p>
+          <label>
+                Тэги:
 <!--                <input type="text" name="new_name" required>-->
-<!--            </label>-->
-<!--            </p>-->
-<!--        <p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Том:-->
-<!--                <input type="text" name="new_tom">-->
-<!--            </label>-->
-<!--            </p>-->
-<!--        <p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Год издания:-->
-<!--                <input type="text" name="new_year">-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Тэги:-->
-<!--&lt;!&ndash;                <input type="text" name="new_name" required>&ndash;&gt;-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Тип:-->
-<!--&lt;!&ndash;                <input type="text" name="new_name" required>&ndash;&gt;-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Расположение:-->
+            </label>
+        </p>
+        <p>
+          <label>
+                Тип:
+<!--                <input type="text" name="new_name" required>-->
+            </label>
+        </p>
+        <p>
+          <label>
+                Расположение:
+                <input type="text" name="new_rasp" required>
+            </label>
+        </p>
+        <p>
+          <label>
+                Ссылка:
 <!--                <input type="text" name="new_rasp" required>-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Количество:-->
-<!--                <input type="text" name="new_kol_vo" required>-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Ссылка:-->
-<!--&lt;!&ndash;                <input type="text" name="new_rasp" required>&ndash;&gt;-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          <label>-->
-<!--                Заметка:-->
-<!--                <textarea class="textarea2" name="new_desc" ></textarea>-->
-<!--            </label>-->
-<!--        </p>-->
-<!--        </div>-->
+            </label>
+        </p>
+        <p>
+          <label>
+                Заметка:
+                <textarea class="textarea2" name="new_desc" ></textarea>
+            </label>
+        </p>
+        </div>
 
-<!--        <div>-->
-<!--            <p>-->
-<!--            <label>-->
-<!--                Аннотация:-->
-<!--                <textarea class="textarea1" name="new_annot" ></textarea>-->
-<!--            </label>-->
-<!--            </p>-->
-<!--            <p>-->
-<!--            <label>-->
-<!--                Дата последнего изменения:-->
-<!--                Дата....-->
-<!--            </label>-->
-<!--            </p>-->
-<!--            <p>-->
-<!--            <label>-->
-<!--                Автор последнеего изменения:-->
-<!--                ФИО..-->
-<!--            </label>-->
-<!--            </p>-->
+        <div>
+            <p>
+            <label>
+                Аннотация:
+                <textarea class="textarea1" name="new_annot" ></textarea>
+            </label>
+            </p>
+            <p>
+            <label>
+                Дата последнего изменения:
+                Дата....
+            </label>
+            </p>
+            <p>
+            <label>
+                Автор последнеего изменения:
+                ФИО..
+            </label>
+            </p>
 
-<!--        </div>-->
-<!--        <p>-->
-<!--            <input type="submit" value="Сохранить изменения">-->
-<!--        </p>-->
-<!--             <a href="#" class="close">Закрыть окно</a>-->
-<!--    </form>-->
-<!--      </div>-->
-<!--    </div>-->
+        </div>
+        <p>
+            <input type="submit" value="Сохранить изменения">
+        </p>
+             <a href="#" class="close">Закрыть окно</a>
+    </form>
+      </div>
+    </div>
+  <!--Добавить-->
+  <div id="zatemnenie2">
+      <div id="block_view3">
+        <form action="{{ url_for('index') }}" method="get">
+        <div class="win">
+            <p>Добавить книгу:</p>
+        <p>
+            <label>
+                Авторы:
+                <input type="text" name="new_in_authors" required>
+            </label>
+            </p>
+        <p>
+          <label>
+                Название:
+                <input type="text" name="new_in_name" required>
+            </label>
+            </p>
+        <p>
+        <p>
+          <label>
+                Том:
+                <input type="text" name="new_in_tom">
+            </label>
+            </p>
+        <p>
+        <p>
+          <label>
+                Год издания:
+                <input type="text" name="new_in_year">
+            </label>
+        </p>
+        <p>
+          <label>
+                Тэги:
+             {{ macros.render_tags2(combo_tags, ID_Tag, len) }}
+            </label>
+        </p>
+        <p>
+          <label>
+                Тип:
+           {{ macros.render_types2(combo_types, ID_Type, len) }}
+            </label>
+        </p>
+        <p>
+          <label>
+                Расположение:
+                <input type="text" name="new_in_rasp" required>
+            </label>
+        </p>
+        <p>
+          <label>
+                Ссылка:
+                 <input type="text" name="new_in_link">
+            </label>
+        </p>
+        <p>
+          <label>
+                Заметка:
+                <textarea class="textarea2" name="new_in_desc" ></textarea>
+            </label>
+        </p>
+        </div>
+
+        <div>
+            <p>
+            <label>
+                Аннотация:
+                <textarea class="textarea1" name="new_in_annot" ></textarea>
+            </label>
+            </p>
+            <p>
+            <label>
+                Дата последнего изменения:
+                Дата....
+            </label>
+            </p>
+            <p>
+            <label>
+                Автор последнего изменения:
+                ФИО..
+            </label>
+            </p>
+
+        </div>
+        <p>
+            <input type="submit" value="Добавить">
+        </p>
+             <a href="#" class="close">Закрыть окно</a>
+    </form>
+      </div>
+    </div>
+<!--  Поиск-->
+  <div id="zatemnenie3">
+      <div id="block_view4">
+        <form action="{{ url_for('index') }}" method="get">
+        <div>
+            <p>Поиск книги:</p>
+        <p>
+            <label>
+                Авторы:
+                {{ macros.render_author3(combo_authors, ID_Tag, len) }}
+            </label>
+            </p>
+        <p>
+          <label>
+                Тэги:
+             {{ macros.render_tags3(combo_tags, ID_Tag, len) }}
+            </label>
+        </p>
+        <p>
+          <label>
+                Тип:
+           {{ macros.render_types3(combo_types, ID_Type, len) }}
+            </label>
+        </p>
+
+        </div>
+        <p>
+            <input type="submit" value="Поиск" name="search">
+        </p>
+             <a href="#" class="close">Закрыть окно</a>
+    </form>
+      </div>
+    </div>
   </p>
     {{ macros.render_table2("Книги", books, len) }}
   </p>

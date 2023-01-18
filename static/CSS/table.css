@@ -4,8 +4,3 @@ table.iksweb{text-decoration: none;border-collapse:collapse;width:100%;text-alig
 	table.iksweb td,table.iksweb th{white-space:pre-wrap;padding:18px 7px;line-height:14px;vertical-align: middle;border: 2px solid #000000;}	table.iksweb tr:hover{background-color:#a7afb8}
 	table.iksweb tr:hover td{color:#f5f5f5;cursor:pointer;}
 	.mobile-table{width: 100%; max-width: 100%; overflow-x: auto;}
-
-tr:hover {
-    background: #f6f6f6; /* Цвет фона при наведении */
-    color: #000; /* Цвет текста при наведении */
-   }

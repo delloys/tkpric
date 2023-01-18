@@ -14,6 +14,7 @@ def login():
         for i in df_login_dict:
             if i == login_name and df_login_dict.get(i) == login_pass:
                 f = 2
+                break
             else:
                 f = 1
     else:

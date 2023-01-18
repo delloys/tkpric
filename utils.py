@@ -2,4 +2,4 @@ import sqlite3
 
 
 def get_db_connection():
-    return sqlite3.connect('biblio.db')
+    return sqlite3.connect('biblio.sqlite')
