@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css" />
+      <link rel="stylesheet" type="text/css" href="/static/CSS/table.css" />
+    <link rel="stylesheet" type="text/css" href="/static/CSS/zatemnenie.css" />
+    <link rel="stylesheet" type="text/css" href="/static/CSS/form_window.css" />
+    <title>Библиотека</title>
+	  {% import "macros.html" as macros %}
+  </head>
+  <body>
+  <div class=menu>
+    <ul >
+        <img src='/static/images/2.png' width="50" height="50">
+        <li><a> Основные фонды</a></li>
+        <li class=active><a href={{ url_for("index") }}>Библиотека</a></li>
+        <li><a> Профиль</a></li>
+        <li><a href={{ url_for("login") }}> Выход</a></li>
+    </ul>
+</div>
+
+  <div class=menu2>
+    <ul>
+        <li><a href="#zatemnenie">Открыть/Изменить</a></li>
+        <li><a>Добавить</a></li>
+        <li><a>Поиск</a></li>
+        <li><a>Фильтр</a></li>
+        <li><a>Удалить</a></li>
+    </ul>
+  </div>
+<!--Открыть/Изменить-->
+    {{ macros.render_change(select_book,id_book,old_author,tags,types,authors,len,int)}}
+  <!--Добавить-->
+<!--  <div id="zatemnenie">-->
+<!--      <div id="block_view2">-->
+<!--        <form action="{{ url_for('index') }}" method="get">-->
+<!--        <div class="win">-->
+<!--            <p>Книга:</p>-->
+<!--        <p>-->
+<!--            <label>-->
+<!--                Авторы:-->
+<!--                <input type="text" name="new_authors" required>-->
+<!--            </label>-->
+<!--            </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Название:-->
+<!--                <input type="text" name="new_name" required>-->
+<!--            </label>-->
+<!--            </p>-->
+<!--        <p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Том:-->
+<!--                <input type="text" name="new_tom">-->
+<!--            </label>-->
+<!--            </p>-->
+<!--        <p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Год издания:-->
+<!--                <input type="text" name="new_year">-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Тэги:-->
+<!--&lt;!&ndash;                <input type="text" name="new_name" required>&ndash;&gt;-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Тип:-->
+<!--&lt;!&ndash;                <input type="text" name="new_name" required>&ndash;&gt;-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Расположение:-->
+<!--                <input type="text" name="new_rasp" required>-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Количество:-->
+<!--                <input type="text" name="new_kol_vo" required>-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Ссылка:-->
+<!--&lt;!&ndash;                <input type="text" name="new_rasp" required>&ndash;&gt;-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          <label>-->
+<!--                Заметка:-->
+<!--                <textarea class="textarea2" name="new_desc" ></textarea>-->
+<!--            </label>-->
+<!--        </p>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--            <p>-->
+<!--            <label>-->
+<!--                Аннотация:-->
+<!--                <textarea class="textarea1" name="new_annot" ></textarea>-->
+<!--            </label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--            <label>-->
+<!--                Дата последнего изменения:-->
+<!--                Дата....-->
+<!--            </label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--            <label>-->
+<!--                Автор последнеего изменения:-->
+<!--                ФИО..-->
+<!--            </label>-->
+<!--            </p>-->
+
+<!--        </div>-->
+<!--        <p>-->
+<!--            <input type="submit" value="Сохранить изменения">-->
+<!--        </p>-->
+<!--             <a href="#" class="close">Закрыть окно</a>-->
+<!--    </form>-->
+<!--      </div>-->
+<!--    </div>-->
+  </p>
+    {{ macros.render_table2("Книги", books, len) }}
+  </p>
+
+<!--  <div class="mobile-table">-->
+<!--<table class="iksweb">-->
+<!--    <thead>-->
+<!--<tr>-->
+<!--	<th>Заголовки</th>-->
+<!--	<th>Заголовки</th>-->
+<!--	<th>Заголовки</th>-->
+<!--	<th>Заголовки</th>-->
+<!--    <th>Заголовки</th>-->
+<!--    <th>Заголовки</th>-->
+<!--    <th>Заголовки</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--	<tbody>-->
+<!--		<tr>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--		</tr>-->
+<!--		<tr>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--		</tr>-->
+<!--		<tr>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--		</tr>-->
+<!--		<tr>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--		</tr>-->
+<!--		<tr>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--			<td></td>-->
+<!--		</tr>-->
+<!--	</tbody>-->
+<!--</table>-->
+<!--  </div>-->
+
+  </body>
+</html>
